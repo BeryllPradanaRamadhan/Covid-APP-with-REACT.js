@@ -34,6 +34,10 @@
     align-items: center;
   }
 
+  .footer__author {
+    display: flex;
+    margin-left: 3rem;
+  }
   
   .footer__brand {
     margin: 1rem;

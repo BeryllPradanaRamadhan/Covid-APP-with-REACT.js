@@ -1,0 +1,20 @@
+:root { 
+    --error: #e74c3c; 
+} 
+ 
+.error { 
+    padding-top: 5px;
+    padding: 4px;
+    align-items: center;
+    text-align: left;
+    background: #ffefef; 
+    border: 1px solid var(--error); 
+    margin-top: 1rem; 
+    color: var(--error); 
+    border-radius: 4px; 
+    margin: 1rem -2;
+    text-justify: auto;
+    font-style: italic;
+    font-display: flex;
+    font-size: 1rem;
+ }
