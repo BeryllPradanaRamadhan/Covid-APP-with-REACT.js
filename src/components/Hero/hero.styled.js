@@ -1,44 +1,42 @@
+import styled from "styled-components";
+
+const HeroStyled = styled.div`
 /* Small Screen */
-.container {
+div {
+    padding: 0.5rem;
     margin: 1rem;
 }
-
-.hero {
+section {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-
-.hero__left {
-    margin-bottom: 1rem;
-}
-
-.hero__title {
+h2 {
     color: #06D6A0;
     font-size: 2.44rem;
-    margin-bottom: -01rem;
-}
-
-.hero__genre {
-    color:#118ab2;
     margin-bottom: 1rem;
 }
-
-.hero__description {
+.hero__left {
+    margin: 1rem;
+    margin-bottom: 1rem;
+}
+h3 {
+    color: #118ab2;
+    margin-bottom: 1rem;
+}
+p {
     color: #073b4c;
     margin-bottom: 1rem;
 }
-
-.hero__button {
+button {
     padding: 0.7rem 2.3rem;
     border-radius: 10px;
     border: none;
     background-color: #06D6A0;
-    color: #fff;
+    color: #ffff;
     cursor: pointer;
 }
-
-.hero__image {
+img {
     max-width: 80%;
     height: auto;
     border-radius: 25%;
@@ -46,7 +44,7 @@
 
 /* Medium Screen */
 @media (min-width: 768px) {
-    .hero {
+    section {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -60,31 +58,23 @@
 
 /* Large Screen */
 @media (min-width: 992px) {
-    .container {
+    div {
         max-width: 1200px;
         margin: 2rem auto;
     }
-
-    .hero {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        text-align: left;
-    }
-
     .hero__left {
         flex-basis: 40%;
     }
-
     .hero__right {
         flex-basis: 60%;
         display: flex;
         justify-content: end;
     }
-    
-    .hero__image {
+    img {
         max-width: 50%;
         height: auto;
     }
 }
+`;
+
+export default HeroStyled;

@@ -1,18 +1,19 @@
-import styles from "./provinsi.module.css";
+import ProvinsiStyled from "./provinsi.styled";
 import Dataprovinsi from "../Dataprovinsi";
 import { nanoid } from "nanoid";
 
 function Provinsi(props) {
   const { dt_provinsi } = props;
   return (
-    <div className={styles.container}>
+    <ProvinsiStyled>
+    <div>
       <div>
-        <h2 className={styles.judul}>Provinsi</h2>
-        <p className={styles.judul__description}>
+        <h2>Provinsi</h2>
+        <p>
           Data Covid Berdasarkan Provinsi
         </p>
       </div>
-      <div className={styles.tabel__container}>
+      <div className="tabel__container">
         <table>
           <thead>
             <tr>
@@ -34,6 +35,7 @@ function Provinsi(props) {
         </table>
       </div>
     </div>
+    </ProvinsiStyled>
   );
 }
 

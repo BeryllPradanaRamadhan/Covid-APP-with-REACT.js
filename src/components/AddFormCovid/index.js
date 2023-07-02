@@ -1,5 +1,6 @@
 import { useState } from "react";
-import styles from "./addformcovid.module.css";
+import AddformcovidStyled from "./addformcovid.styled";
+
 import Error from "../Error";
 import { nanoid } from "nanoid";
 import image from "../assets/AddForm.svg"
@@ -87,23 +88,23 @@ function AddFormCovid(props) {
   }
 
   return (
-    <div className={styles.container}>
-      <section className={styles.form}>
-        <div className={styles.form__left}>
+    <AddformcovidStyled>
+    <div>
+      <section>
+        <div className="form__left">
           <img
-            className={styles.form__image}
             src={image}
             alt=""
           />
         </div>
-        <div className={styles.form__right}>
-          <h1 className={styles.form__title}>Form Covid</h1>
+        <div className="form__right">
+          <h1>Form Covid</h1>
           <form onSubmit={handleSubmit}>
-            <div className={styles.form__group}>
-              <label className={styles.form__label}>
+            <div className="form__group">
+              <label>
                 Provinsi
               </label>
-              <select type="text" name="provinsi" id="provinsi" value={provinsi} onChange={handleProvinsi} className={styles.form__input}>
+              <select type="text" name="provinsi" id="provinsi" value={provinsi} onChange={handleProvinsi} className="form__input">
               <option value="">Pilih</option>
               {
                 dt_provinsi.provinces.map(function (province, i) {
@@ -111,39 +112,40 @@ function AddFormCovid(props) {
                 })
               }
               </select>
-              {isProvinsiError ? <Error>Provinsi Wajib Diisi<p className={styles.error}></p></Error>:""}
+              {isProvinsiError ? <Error>Provinsi Wajib Diisi<p></p></Error>:""}
             </div>
-            <div className={styles.form__group}>
-              <label className={styles.form__label}>
+            <div className="form__group">
+              <label>
                 Status
               </label>
-              <select type="text" name="status" id="status" value={status} onChange={handleStatus} className={styles.form__input}>
+              <select type="text" name="status" id="status" value={status} onChange={handleStatus} className="form__input">
               <option value="">Pilih</option>
               <option value="kasus">Positif</option>
               <option value="sembuh">Sembuh</option>
               <option value="dirawat">Dirawat</option>
               <option value="meninggal">Meninggal</option>
               </select>
-              {isStatusError ? <Error>Status Wajib Diisi<p className={styles.error}></p></Error>:""}
+              {isStatusError ? <Error>Status Wajib Diisi<p></p></Error>:""}
             </div>
-            <div className={styles.form__group}>
-              <label>Jumlah</label> <br />
+            <div className="form__group">
+              <label>Jumlah</label>
               <input
                 type="number"
                 id="jumlah"
                 name="jumlah"
-                className={styles.form__input}
+                className="form__input"
                 value={jumlah} onChange={handleJumlah}
               />
-              {isJumlahError ? <Error>Jumlah Wajib Diisi<p className={styles.error}></p></Error>:""}
+              {isJumlahError ? <Error>Jumlah Wajib Diisi<p></p></Error>:""}
             </div>
             <div>
-              <button type="submit" className={styles.form__button}>Submit</button>
+              <button type="submit">Submit</button>
             </div>
           </form>
         </div>
       </section>
     </div>
+    </AddformcovidStyled>
   );
 }
 

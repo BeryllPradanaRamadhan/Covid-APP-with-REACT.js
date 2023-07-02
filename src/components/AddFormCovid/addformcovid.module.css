@@ -68,7 +68,7 @@
 @media (min-width: 992px) {
   .container {
     max-width: 1200px;
-    margin: 5rem auto;
+    margin: 0rem auto;
   }
 
   .form {

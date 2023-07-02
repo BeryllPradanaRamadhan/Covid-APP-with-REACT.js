@@ -1,4 +1,4 @@
-import styles from "./global.module.css";
+import GlobalStyled from "./global.styled";
 import data from "../../utils/constants/indonesia";
 import React from "react";
 
@@ -9,38 +9,40 @@ function Global() {
   const mati = indonesia.find((unit) => unit.status === "Meninggal").total;
 
   return (
-    <div className={styles.container}>
-      <div className={styles.judul}>
-        <h1 className={styles.judul__card}>Indonesia</h1>
-        <p className={styles.judul__description}>
+    <GlobalStyled>
+    <div>
+      <div className="judul">
+        <h1>Indonesia</h1>
+        <p>
           Data Covid Berdasarkan Indonesia
         </p>
       </div>
       <br />
 
-      <div className={styles.induk}>
-        <div className={styles.card1}>
+      <div className="induk">
+        <div className="card1">
           <div>
-            <h3 className={styles.card1__title}>Confirmed</h3>
-            <h1 className={styles.card1__hasil}>{konfirmasi}</h1>
+            <h3 className="card1__title">Confirmed</h3>
+            <h1 className="card1__hasil">{konfirmasi}</h1>
           </div>
         </div>
 
-        <div className={styles.card2}>
+        <div className="card2">
           <div>
-            <h3 className={styles.card2__title}>Recovered</h3>
-            <h1 className={styles.card2__hasil}>{sembuh}</h1>
+            <h3 className="card2__title">Recovered</h3>
+            <h1 className="card2__hasil">{sembuh}</h1>
           </div>
         </div>
 
-        <div className={styles.card3}>
+        <div className="card3">
           <div>
-            <h3 className={styles.card3__title}>Dead</h3>
-            <h1 className={styles.card3__hasil}>{mati}</h1>
+            <h3 className="card3__title">Dead</h3>
+            <h1 className="card3__hasil">{mati}</h1>
           </div>
         </div>
       </div>
     </div>
+    </GlobalStyled>
   );
 }
 

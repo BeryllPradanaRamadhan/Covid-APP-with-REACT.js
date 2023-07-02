@@ -1,23 +1,25 @@
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .judul {
+import styled from "styled-components";
+
+const ProvinsiStyled = styled.div`
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+
+h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
     text-align: center;
     color: #06D6A0;
-  }
-  
-  .judul__description {
-    font-size: 1.2rem;
+}
+
+p {
+    font-size: 1.1rem;
     margin-bottom: 40px;
     text-align: center;
-  }
-  
-  .tabel__container {
+    color: #118AB2;
+}
+
+.tabel__container {
     overflow-x: auto;
   }
   
@@ -26,13 +28,17 @@
     border-collapse: collapse;
   }
   
+  .th {
+    color: #06D6A0;
+  }
+
   th,
   td {
     padding: 10px;
-    text-align: left;
+    text-align: center;
     border: 1px solid #ddd;
   }
-  
+
   @media only screen and (max-width: 768px) {
     .judul {
       font-size: 2rem;
@@ -48,3 +54,6 @@
       white-space: nowrap;
     }
   }
+`
+
+export default ProvinsiStyled;

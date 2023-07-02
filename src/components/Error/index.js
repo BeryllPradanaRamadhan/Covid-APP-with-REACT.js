@@ -1,12 +1,14 @@
-import styles from "./error.module.css" 
-  
+import ErrorStyled from "./error.styled";
+
  function Error(props) { 
      const { children } = props; 
   
      return ( 
-         <div className={styles.error}> 
+        <ErrorStyled>
+         <div> 
              <span>{children}</span> 
-         </div> 
+         </div>
+         </ErrorStyled> 
      ) 
  } 
   
