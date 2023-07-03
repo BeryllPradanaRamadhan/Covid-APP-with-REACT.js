@@ -1,30 +1,25 @@
-import { useState } from "react";
-import Footer from "../components/Footer";
+import { useEffect, useState } from "react";
 import Global from "../components/Global";
 import Hero from "../components/Hero";
-import Navbar from "../components/Navbar";
-import Provinsi from "../components/Provinsi";
-import data from "../utils/constants/provinces";
-import AddFormCovid from "../components/AddFormCovid";
-
-function Main() {
-  const [dt_provinsi, setDataProvinsi] = useState(data);
-  return (
-    <main>
-      <Hero />
-      <Global />
-      <Provinsi dt_provinsi = {dt_provinsi} setDataProvinsi={setDataProvinsi}/>
-      <AddFormCovid dt_provinsi = {dt_provinsi} setDataProvinsi={setDataProvinsi}/>
-    </main>
-  );
-}
+import axios from "axios";
 
 function Home() {
+const [global, setGlobal] = useState([])
+
+  useEffect(() => {
+    getGlobalSituation();
+  }, []);
+
+  async function getGlobalSituation() {
+    const response = await axios("https://covid-fe-2023.vercel.app/api/global.json")
+    setGlobal(response.data.global)
+    console.log(response);
+  }
+
   return (
     <>
-      <Navbar />
-      <Main />
-      <Footer />
+      <Hero />
+      <Global title="Global Situation" global={global} />
     </>
   );
 }

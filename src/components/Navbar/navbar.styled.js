@@ -29,6 +29,12 @@ const StyledNavbar = styled.div`
     text-align: left;
   }
 
+  a{
+    text-decoration: none;
+    color: #fff;
+
+  }
+
   /* Medium Screen */
   @media (min-width: 768px) {
     nav {
