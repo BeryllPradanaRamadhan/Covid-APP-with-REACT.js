@@ -5,10 +5,10 @@ function Dataprovinsi(props){
         <tr>
             <td>{nomer}</td>
             <td>{dt_provinsi.kota}</td>
-            <td>{dt_provinsi.kasus}</td>
-            <td>{dt_provinsi.sembuh}</td>
-            <td>{dt_provinsi.dirawat}</td>
-            <td>{dt_provinsi.meninggal}</td>
+            <td>{dt_provinsi.kasus.toLocaleString("id-ID")}</td>
+            <td>{dt_provinsi.sembuh.toLocaleString("id-ID")}</td>
+            <td>{dt_provinsi.dirawat.toLocaleString("id-ID")}</td>
+            <td>{dt_provinsi.meninggal.toLocaleString("id-ID")}</td>
         </tr>
     )
 }

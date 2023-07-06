@@ -1,40 +1,40 @@
 import styled from "styled-components";
 
-const ProvinsiStyled = styled.div`
-max-width: 1200px;
-margin: 0 auto;
-padding: 3rem;
-padding-top: 0rem;
+const IndonesiaProvincesStyled = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem;
+  padding-top: 0rem;
 
-thead {
-  color: #06D6A0;
-}
+  thead {
+    color: #06d6a0;
+  }
 
-h2 {
+  h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
     text-align: center;
-    color: #06D6A0;
-}
+    color: #06d6a0;
+  }
 
-p {
+  p {
     font-size: 1.1rem;
     margin-bottom: 40px;
     text-align: center;
-    color: #118AB2;
-}
+    color: #118ab2;
+  }
 
-.tabel__container {
+  .tabel__container {
     overflow-x: auto;
   }
-  
+
   table {
     width: 100%;
     border-collapse: collapse;
   }
-  
+
   .th {
-    color: #06D6A0;
+    color: #06d6a0;
   }
 
   th,
@@ -48,17 +48,16 @@ p {
     .judul {
       font-size: 2rem;
     }
-  
+
     .judul__description {
       font-size: 1rem;
     }
-  
+
     th,
     td {
       font-size: 0.8rem;
       white-space: nowrap;
     }
   }
-`
-
-export default ProvinsiStyled;
+`;
+export default IndonesiaProvincesStyled;

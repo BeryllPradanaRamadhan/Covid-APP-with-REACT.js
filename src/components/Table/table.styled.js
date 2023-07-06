@@ -1,14 +1,10 @@
 import styled from "styled-components";
 
-const ProvinsiStyled = styled.div`
+const TableStyled = styled.div`
 max-width: 1200px;
 margin: 0 auto;
 padding: 3rem;
 padding-top: 0rem;
-
-thead {
-  color: #06D6A0;
-}
 
 h2 {
     font-size: 1.8rem;
@@ -61,4 +57,4 @@ p {
   }
 `
 
-export default ProvinsiStyled;
+export default TableStyled;

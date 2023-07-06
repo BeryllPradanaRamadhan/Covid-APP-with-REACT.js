@@ -3,12 +3,12 @@ import Dataprovinsi from "../Dataprovinsi";
 import { nanoid } from "nanoid";
 
 function Provinsi(props) {
-  const { dt_provinsi } = props;
+  const { dt_provinsi , title } = props;
   return (
     <ProvinsiStyled>
     <div>
       <div>
-        <h2>Provinsi</h2>
+        <h2>{title}</h2>
         <p>
           Data Covid Berdasarkan Provinsi
         </p>

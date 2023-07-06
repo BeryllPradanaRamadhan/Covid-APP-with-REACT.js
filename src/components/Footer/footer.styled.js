@@ -25,6 +25,10 @@ const StyledFooter = styled.div`
     list-style: none;
     margin: 0.5rem;
   }
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
   /* Medium Screen */
   @media (min-width: 768px) {
     footer {
@@ -67,7 +71,7 @@ const StyledFooter = styled.div`
       margin-right: 3rem;
     }
     li {
-      margin: 1rem;
+      margin: 0.8rem;
       cursor: pointer;
     }
   }

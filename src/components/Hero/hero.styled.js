@@ -9,28 +9,29 @@ div {
 section {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: start;
+    margin-bottom: 3rem;
 }
 h2 {
     color: #06D6A0;
     font-size: 2.44rem;
-    margin-bottom: 1rem;
+    margin-bottom: -0.8rem;
 }
 .hero__left {
-    margin: 1rem;
-    margin-bottom: 1rem;
+    margin: 0rem;
+    margin-bottom: 1.7rem;
 }
 h3 {
     color: #118ab2;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 p {
     color: #073b4c;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
 }
 button {
     padding: 0.7rem 2.3rem;
-    border-radius: 10px;
+    border-radius: 7px;
     border: none;
     background-color: #06D6A0;
     color: #ffff;
@@ -60,18 +61,18 @@ img {
 @media (min-width: 992px) {
     div {
         max-width: 1200px;
-        margin: 2rem auto;
+        margin: 0rem auto;
     }
     .hero__left {
-        flex-basis: 40%;
+        flex-basis: 30%;
     }
     .hero__right {
-        flex-basis: 60%;
+        flex-basis: 70%;
         display: flex;
         justify-content: end;
     }
     img {
-        max-width: 50%;
+        max-width: 60%;
         height: auto;
     }
 }

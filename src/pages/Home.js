@@ -2,24 +2,29 @@ import { useEffect, useState } from "react";
 import Global from "../components/Global";
 import Hero from "../components/Hero";
 import axios from "axios";
+import ENDPOINT from "../utils/constants/endpoint";
+import Regions from "../components/Regions";
 
 function Home() {
 const [global, setGlobal] = useState([])
+const [regions, setRegions] = useState([])
 
   useEffect(() => {
     getGlobalSituation();
   }, []);
 
   async function getGlobalSituation() {
-    const response = await axios("https://covid-fe-2023.vercel.app/api/global.json")
+    const response = await axios(ENDPOINT.GLOBAL)
     setGlobal(response.data.global)
-    console.log(response);
+    setRegions(response.data.regions)
+
   }
 
   return (
     <>
       <Hero />
       <Global title="Global Situation" global={global} />
+      <Regions data={regions}/>
     </>
   );
 }
