@@ -10,10 +10,9 @@ function Hero() {
           <h2>Covid ID</h2>
           <h3>Monitoring Perkembangan Covid</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-            similique explicabo optio dolorem repellendus error tenetur beatae
-            dicta minima nesciunt!
+          Vaksin booster Covid-19 bisa membuat kamu makin aman dari serangan virus, meminimalisir resiko sakit parah, rawat inap, dan kematian akibat Covid-19.
           </p>
+          <p>Segera lengkapi vaksinasi kamu di fasilitas kesehatan dengan daftar dibawah ini!</p>
           <button>Vaccine</button>
         </div>
         <div className="hero__right">

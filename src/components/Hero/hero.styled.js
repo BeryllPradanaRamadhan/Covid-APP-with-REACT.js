@@ -27,7 +27,6 @@ h3 {
 }
 p {
     color: #073b4c;
-    margin-bottom: 2.5rem;
 }
 button {
     padding: 0.7rem 2.3rem;
@@ -64,10 +63,10 @@ img {
         margin: 0rem auto;
     }
     .hero__left {
-        flex-basis: 30%;
+        flex-basis: 40%;
     }
     .hero__right {
-        flex-basis: 70%;
+        flex-basis: 60%;
         display: flex;
         justify-content: end;
     }

@@ -45,9 +45,21 @@ section {
     display: inline;
 p {
   text-align: left;
+  color: #073B4C;
 }
   }
-
+.confirmed{
+  color: #06d6a0;
+  margin-top: -0.5rem;
+}
+.recovered{
+  color: #118AB2;
+  margin-top: -0.5rem;
+}
+.death{
+  color: #ef476f;
+  margin-top: -0.5rem;
+}
 
 img {
   width: 40px;

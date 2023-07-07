@@ -1,12 +1,14 @@
 import { useState } from "react";
 import AddformcovidStyled from "./addformcovid.styled";
-
 import Error from "../Error";
 import { nanoid } from "nanoid";
 import image from "../assets/AddForm.svg"
+import { useDispatch, useSelector } from "react-redux";
+import { updateCase } from "../../features";
 
-function AddFormCovid(props) {
-  const { dt_provinsi, setDataProvinsi } = props;
+function AddFormCovid() {
+  const dt_provinsi = useSelector((state) => state.case.provinces)
+  const dispatch = useDispatch()
 
   const [provinsi, setProvinsi] = useState("");
   const [status, setStatus] = useState("");
@@ -50,41 +52,9 @@ function AddFormCovid(props) {
     }
   }
 
-  function updateProvinces() {
-    const index = dt_provinsi.provinces.findIndex(
-      (item) => item.kota === provinsi
-    );
-    const foundProvinsi = dt_provinsi.provinces.find(
-      (item) => item.kota === provinsi
-    );
-
-    if (status === "kasus") {
-      dt_provinsi.provinces[index] = {
-        ...foundProvinsi,
-        kasus: parseInt(foundProvinsi.kasus) + parseInt(jumlah),
-      };
-    } else if (status === "sembuh") {
-      dt_provinsi.provinces[index] = {
-        ...foundProvinsi,
-        sembuh: parseInt(foundProvinsi.sembuh) + parseInt(jumlah),
-      };
-    } else if (status === "meninggal") {
-      dt_provinsi.provinces[index] = {
-        ...foundProvinsi,
-        meninggal: parseInt(foundProvinsi.meninggal) + parseInt(jumlah),
-      };
-    } else if (status === "dirawat") {
-      dt_provinsi.provinces[index] = {
-        ...foundProvinsi,
-        dirawat: parseInt(foundProvinsi.dirawat) + parseInt(jumlah),
-      };
-    }
-    setDataProvinsi({...dt_provinsi, provinces:[...dt_provinsi.provinces]});
-  }
-
   function handleSubmit(e){
     e.preventDefault();
-    Validasi()&& updateProvinces();
+    Validasi()&& dispatch(updateCase({provinsi, status, jumlah}));
   }
 
   return (
@@ -107,7 +77,7 @@ function AddFormCovid(props) {
               <select type="text" name="provinsi" id="provinsi" value={provinsi} onChange={handleProvinsi} className="form__input">
               <option value="">Pilih</option>
               {
-                dt_provinsi.provinces.map(function (province, i) {
+                dt_provinsi.map(function (province, i) {
                   return <option key={nanoid()} nomer={++i} value={province.kota} > {province.kota} </option> 
                 })
               }

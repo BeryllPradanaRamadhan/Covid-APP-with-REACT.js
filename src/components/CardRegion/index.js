@@ -14,11 +14,11 @@ function CardRegion(props) {
     <section>
     <div className="card__left">
         <p>confirmed</p>
-        <h2>{numbers.confirmed.toLocaleString("id-ID")}</h2>
+        <h2 className="confirmed">{numbers.confirmed.toLocaleString("id-ID")}</h2>
         <p>recovered</p>
-        <h2>{numbers.recovered.toLocaleString("id-ID")}</h2>
+        <h2 className="recovered">{numbers.recovered.toLocaleString("id-ID")}</h2>
         <p>death</p>
-        <h2>{numbers.death.toLocaleString("id-ID")}</h2>
+        <h2 className="death">{numbers.death.toLocaleString("id-ID")}</h2>
     </div>
     <div>
         <img src={icon1} alt="" />

@@ -1,9 +1,11 @@
 import ProvinsiStyled from "./provinsi.styled";
 import Dataprovinsi from "../Dataprovinsi";
 import { nanoid } from "nanoid";
+import { useSelector } from "react-redux";
 
 function Provinsi(props) {
-  const { dt_provinsi , title } = props;
+  const dt_provinsi = useSelector((state) => state.case.provinces)
+  const {  title } = props;
   return (
     <ProvinsiStyled>
     <div>
@@ -26,7 +28,7 @@ function Provinsi(props) {
             </tr>
           </thead>
           <tbody>
-            {dt_provinsi.provinces.map(function (province, i) {
+            {dt_provinsi.map(function (province, i) {
               return (
                 <Dataprovinsi key={nanoid()} nomer={++i} dt_provinsi={province} />
               );
